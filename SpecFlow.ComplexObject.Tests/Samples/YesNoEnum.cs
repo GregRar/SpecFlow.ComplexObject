@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SpecFlow.ComplexObject.Tests.Sample
+namespace SpecFlow.ComplexObject.Tests.Samples
 {
     public enum YesNoEnum
     {

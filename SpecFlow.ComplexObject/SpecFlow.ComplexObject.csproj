@@ -46,9 +46,12 @@
   <ItemGroup>
     <Compile Include="ComplexInstanceExtensions.cs" />
     <Compile Include="ComplexInstanceExtensionSettings.cs" />
+    <Compile Include="Exceptions\ComplexObjectException.cs" />
+    <Compile Include="Exceptions\NoParameterlessConstructorException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyData.cs" />
     <Compile Include="TargetPropertyTypeInfo.cs" />
+    <Compile Include="Utilities.cs" />
     <Compile Include="ValuesInterceptors\EmptyStringValueInterceptor.cs" />
     <Compile Include="IValueInterceptor.cs" />
     <Compile Include="ValuesInterceptors\NullValueInterceptor.cs" />

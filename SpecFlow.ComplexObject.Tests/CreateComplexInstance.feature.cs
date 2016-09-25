@@ -66,15 +66,13 @@ namespace SpecFlow.ComplexObject.Tests
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Map data from table using CreateComplexIntance extension")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void MapDataFromTableUsingCreateComplexIntanceExtension()
+        [NUnit.Framework.DescriptionAttribute("Map all simple data types from table using CreateComplexIntance extension")]
+        public virtual void MapAllSimpleDataTypesFromTableUsingCreateComplexIntanceExtension()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Map data from table using CreateComplexIntance extension", new string[] {
-                        "mytag"});
-#line 7
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Map all simple data types from table using CreateComplexIntance extension", ((string[])(null)));
+#line 6
 this.ScenarioSetup(scenarioInfo);
-#line 8
+#line 7
  testRunner.Given("Sample complex class with initialized properties", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
@@ -143,10 +141,10 @@ this.ScenarioSetup(scenarioInfo);
             table1.AddRow(new string[] {
                         "EnumNullableNull",
                         "<null>"});
-#line 9
+#line 8
  testRunner.When("Create instance of the same class using data from table and CreateComplexIntance " +
                     "extension", ((string)(null)), table1, "When ");
-#line 45
+#line 44
  testRunner.Then("the objects should be the same", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

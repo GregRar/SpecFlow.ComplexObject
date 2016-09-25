@@ -1,13 +1,13 @@
-﻿using SpecFlow.ComplexObject.Tests.Sample;
+﻿using SpecFlow.ComplexObject.Tests.Samples;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SpecFlow.ComplexObject.Tests.Sample
+namespace SpecFlow.ComplexObject.Tests.Samples
 {
-    public class ComplexInstanceSampleClass
+    public class ClassWithAllSimpleTypes
     {
         public string StringEmpty { get; set; }
         public string StringNull { get; set; }

@@ -24,10 +24,9 @@ namespace SpecFlow.ComplexObject
 
         //TODO GRAR: Similar function for objects that doesn't have parameterless constructor and you pass instance
         public static TTarget CreateComplexInstance<TTarget>(this Table table)
-            where TTarget : new()
+            where TTarget : class
         {
-
-            var target = new TTarget();
+            TTarget target = Utilities.CreateInstance<TTarget>();
 
             //TODO GRAR: Check table structure (if has 2 rows!)
             var properties = table.Rows.Select(row => new PropertyData(row[0], row[1]));

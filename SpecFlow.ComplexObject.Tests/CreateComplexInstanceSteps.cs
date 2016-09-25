@@ -1,16 +1,17 @@
 ﻿using System;
 using TechTalk.SpecFlow;
 using FluentAssertions;
-using SpecFlow.ComplexObject.Tests.Sample;
+using SpecFlow.ComplexObject.Tests.Samples;
 
 namespace SpecFlow.ComplexObject.Tests
 {
     [Binding]
+    [Scope(Feature = "CreateComplexInstance")]
     public class CreateComplexInstanceSteps
     {
-        private readonly CreateComplexInstanceContext contex;
+        private readonly CreateComplexInstanceContext<ClassWithAllSimpleTypes> contex;
 
-        public CreateComplexInstanceSteps(CreateComplexInstanceContext testContext)
+        public CreateComplexInstanceSteps(CreateComplexInstanceContext<ClassWithAllSimpleTypes> testContext)
         {
             this.contex = testContext;
         }
@@ -18,7 +19,7 @@ namespace SpecFlow.ComplexObject.Tests
         [Given(@"Sample complex class with initialized properties")]
         public void GivenSampleComplexClassWithInitializedProperties()
         {
-            var expected = new ComplexInstanceSampleClass
+            var expected = new ClassWithAllSimpleTypes
             {
                 StringValue = "String property value",
                 StringEmpty = "",
@@ -47,7 +48,7 @@ namespace SpecFlow.ComplexObject.Tests
         }
         
         [When(@"Create instance of the same class using data from table and CreateComplexIntance extension")]
-        public void WhenCreateInstanceOfTheSameClassUsingDataFromTableAndCreateComplexIntanceExtension(ComplexInstanceSampleClass mappingResult)
+        public void WhenCreateInstanceOfTheSameClassUsingDataFromTableAndCreateComplexIntanceExtension(ClassWithAllSimpleTypes mappingResult)
         {
             this.contex.MappingResult = mappingResult;
         }

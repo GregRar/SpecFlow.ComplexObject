@@ -63,16 +63,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CreateComplexInstance.feature</DependentUpon>
     </Compile>
-    <Compile Include="Sample\ComplexInstanceSampleClass.cs" />
+    <Compile Include="CreateObjectWithPrivateConstructorAndSetter.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateObjectWithPrivateConstructorAndSetter.feature</DependentUpon>
+    </Compile>
+    <Compile Include="CreateObjectWithPrivateConstructorAndSetterSteps.cs" />
+    <Compile Include="Samples\ClassWithAllSimpleTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ComplexInstanceTransformations.cs" />
-    <Compile Include="Sample\YesNoEnum.cs" />
+    <Compile Include="Samples\ClassWithNoParameterlessConstructor.cs" />
+    <Compile Include="Samples\ClassWithPrivateConstructorAndSetter.cs" />
+    <Compile Include="Samples\YesNoEnum.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="CreateComplexInstance.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CreateComplexInstance.feature.cs</LastGenOutput>
+    </None>
+    <None Include="CreateObjectWithPrivateConstructorAndSetter.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CreateObjectWithPrivateConstructorAndSetter.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

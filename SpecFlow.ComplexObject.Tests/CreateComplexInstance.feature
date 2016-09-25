@@ -3,8 +3,7 @@
 	As a test enigneer
 	I want extenstion to map values from the table into object
 
-@mytag
-Scenario: Map data from table using CreateComplexIntance extension
+Scenario: Map all simple data types from table using CreateComplexIntance extension
 	Given Sample complex class with initialized properties
 	When Create instance of the same class using data from table and CreateComplexIntance extension 
 	| property             | value                                |
@@ -30,7 +29,6 @@ Scenario: Map data from table using CreateComplexIntance extension
 	| EnumNullableValue    | No                                   |
 	| EnumNullableNull     | <null>                               |
 	#TODO
-	#| CustomStructure      |                       |
 	#| Dic["Key"]                 |                       |
 	#| Collection[0]              |                       |
 	#| Collection[1]              |                       |
@@ -42,4 +40,5 @@ Scenario: Map data from table using CreateComplexIntance extension
 	#| Collection[0].City[1].City |                       |
 	#| ComplexProperty.Name       |                       |
 	#| ComplexProperty.Name.Title |                       |
+	#| CustomStructure      |                       |
 	Then the objects should be the same 

@@ -1,4 +1,4 @@
-﻿using SpecFlow.ComplexObject.Tests.Sample;
+﻿using SpecFlow.ComplexObject.Tests.Samples;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,10 +7,22 @@ using System.Threading.Tasks;
 
 namespace SpecFlow.ComplexObject.Tests
 {
-    public class CreateComplexInstanceContext
+    public class CreateComplexInstanceContext<TTarget>
     {
-        public ComplexInstanceSampleClass Expected { get; set; }
+        public CreateComplexInstanceContext()
+        {
+            this.Exceptions = new List<Exception>();
+        }
 
-        public ComplexInstanceSampleClass MappingResult { get; set; }
+        public TTarget Expected { get; set; }
+
+        public TTarget MappingResult { get; set; }
+
+        public List<Exception> Exceptions { get; private set; }
+
+        public Exception GetLastException()
+        {
+            return this.Exceptions.Last();
+        }
     }
 }

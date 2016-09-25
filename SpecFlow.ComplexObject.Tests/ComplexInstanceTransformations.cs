@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using SpecFlow.ComplexObject;
-using SpecFlow.ComplexObject.Tests.Sample;
+using SpecFlow.ComplexObject.Tests.Samples;
 
 namespace SpecFlow.ComplexObject.Tests
 {
@@ -13,9 +13,15 @@ namespace SpecFlow.ComplexObject.Tests
     public class DealTransformation
     {
         [StepArgumentTransformation]
-        public ComplexInstanceSampleClass ComplexInstanceSampleClassTransformation(Table table)
+        public ClassWithAllSimpleTypes ObjectWithAllSimpleTypesTransformation(Table table)
         {
-            return table.CreateComplexInstance<ComplexInstanceSampleClass>();
+            return table.CreateComplexInstance<ClassWithAllSimpleTypes>();
+        }
+
+        [StepArgumentTransformation]
+        public ClassWithPrivateConstructorAndSetter ObjectWithPrivateConstructorAndSetterTransformation(Table table)
+        {
+            return table.CreateComplexInstance<ClassWithPrivateConstructorAndSetter>();
         }
     }
 }
